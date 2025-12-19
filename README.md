@@ -35,31 +35,18 @@ The solution uses a simple and efficient algorithm:
 
 ## Prerequisites
 
-- JDK 17 or higher
-- Gradle 8.x (or use the wrapper)
+- JDK 21
+- Gradle 9.x
 
 ## Building and Running
 
-### Option 1: Using Gradle Wrapper (Recommended)
-
-```bash
-# Generate wrapper if not present
-gradle wrapper
-
-# Run the application
-./gradlew run
-
-# Run with a specific file
-./gradlew run --args="eventyr.txt"
-```
-
-### Option 2: Using Gradle directly
+### Using Gradle
 
 ```bash
 gradle run
 ```
 
-### Option 3: Using Kotlin compiler directly
+### Using Kotlin compiler directly
 
 ```bash
 kotlinc src/main/kotlin/AnagramFinder.kt -include-runtime -d anagram.jar
@@ -69,17 +56,17 @@ java -jar anagram.jar eventyr.txt
 ## Running Tests
 
 ```bash
-./gradlew test
+gradle test
 ```
 
 ## Example Output
 
 ```
-akte kate teak
-aldri arild
-aller ralle
-alt tal
-andre ander denar rande
+at ta
+bar bra
+dem med
+dro ord rod
+hellestein steinhelle
 ...
 ```
 
@@ -87,7 +74,6 @@ andre ander denar rande
 
 ```
 ├── build.gradle.kts          # Gradle build configuration
-├── settings.gradle.kts       # Gradle settings
 ├── eventyr.txt               # Input word list
 ├── src/
 │   ├── main/kotlin/
